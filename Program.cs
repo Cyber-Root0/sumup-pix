@@ -15,7 +15,7 @@
 Config.setAccessToken("");
 var checkout = new Checkout();
 var fields = new CheckoutFields().setAmount(10).setCurrency("BRL").setDescription("teste")
-.setPayerEmail("boteistem@gmail.com").setReference("wdwdd");
-var response = checkout.Create(fields);
+.setPayerEmail("boteistem@gmail.com").setReference("testref");
+var response = checkout.CreateAndProcessPix(fields);
 var cs = new CSharpDumper().Dump(response);
 Console.WriteLine(cs);

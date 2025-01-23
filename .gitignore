@@ -1,1 +1,26 @@
+# Ignorar todas as pastas de build no diretório obj
+obj/
 bin
+
+# Ignorar apenas a subpasta Debug dentro de obj
+obj/Debug/
+
+# Ignorar arquivos temporários
+*.tmp
+*.log
+*.bak
+*.swp
+
+# Ignorar arquivos de backup e de IDEs comuns
+*.user
+*.suo
+*.ds_store
+.vscode/
+.idea/
+*.vs/
+
+# Ignorar arquivos binários de build
+bin/
+*.exe
+*.dll
+*.pdb

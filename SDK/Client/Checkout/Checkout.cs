@@ -60,7 +60,7 @@ namespace SumUp.SDK.Client.Checkout
         private object getObjectToPixProcess(){
             return new
             {
-                payment_type = this.getCheckoutId()
+                payment_type = "qr_code_pix"
             };
         }
         /// <summary>
