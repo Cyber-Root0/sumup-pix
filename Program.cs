@@ -9,8 +9,13 @@
  * or altered from any source distribution.
  */
  using SumUp.SDK.Helper;
- using SumUp.SDK.Client.Me;
+ using SumUp.SDK.Client.Checkout;
+ using SumUp.SDK.Fields;
  using VarDump;
-Config.setAccessToken("sup_sk_04JW5nHWMGh6u34Xir4wMHDULLBlWXaIp");
-var info = new Info();
-var teste = info.getAccountInformation();
+Config.setAccessToken("");
+var checkout = new Checkout();
+var fields = new CheckoutFields().setAmount(10).setCurrency("BRL").setDescription("teste")
+.setPayerEmail("boteistem@gmail.com").setReference("wdwdd");
+var response = checkout.Create(fields);
+var cs = new CSharpDumper().Dump(response);
+Console.WriteLine(cs);
